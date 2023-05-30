@@ -62,7 +62,7 @@ header ul li {
     text-align: center;
 }
 
-.moviesearch {
+.moviesearch, .citysearch {
     margin-top: 50px;
     margin-left: 22px;
     height: 45px;
@@ -73,7 +73,7 @@ header ul li {
     font-size: 28px;
 }
 
-.suggestions {
+.suggestions, .city-suggestions {
     position: absolute;
     z-index: 1;
     background-color: #d3d4d6;
@@ -82,28 +82,40 @@ header ul li {
     max-height: 400px;
 }
 
-.suggestions::-webkit-scrollbar {
+.searchbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.citysearch {
+    margin-right: 22px;
+}
+
+.suggestions::-webkit-scrollbar,
+.city-suggestions::-webkit-scrollbar {
     width: 10px;
 }
 
 
-.suggestions::-webkit-scrollbar-track {
+.suggestions::-webkit-scrollbar-track,
+.city-suggestions::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
 
-.suggestions::-webkit-scrollbar-thumb {
+.suggestions::-webkit-scrollbar-thumb,
+.city-suggestions::-webkit-scrollbar-thumb {
     background: #888;
 }
 
-.suggestions div {
+.suggestions div, .city-suggestions div {
     padding: 10px;
     width: 400px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.suggestions div:hover {
+.suggestions div:hover, .city-suggestions div:hover {
     background-color: #2069e0;
     color: #fff;
     border-radius: 0;
