@@ -7,6 +7,9 @@ const options = {
     morde: 'cors'
 };
 
+// global movies
+let movies = [];
+
 async function getMovies() {
     try {
         const response = await fetch(url, options);
@@ -15,8 +18,9 @@ async function getMovies() {
         }
 
         const data = await response.json();
+        movies = data.response;
 
-        console.log(data.response);
+        // console.log(data.response);
 
         return data.response;
     } catch (error) {
@@ -59,3 +63,30 @@ function appendCardToContainer(card) {
 
 getMovies()
     .then(movies => printMovies(movies));
+
+function movieSearch() {
+    const searchInput = document.querySelector('.moviesearch');
+    const suggestions = document.querySelector('.suggestions');
+
+    searchInput.addEventListener('input', function(event) {
+        const searchTerm = searchInput.value.toLowerCase();
+        suggestions.innerHTML = '';
+
+        if (searchTerm.trim() !== ''){
+            const filter = movies.filter(movie =>
+                movie.title.toLowerCase().includes(searchTerm)
+            );
+
+            filter.forEach(movie => {
+                const div = document.createElement('div');
+                div.textContent = movie.title;
+                suggestions.appendChild(div);
+                console.log(movie.title);
+            });
+        }
+    });
+
+
+}
+
+movieSearch();

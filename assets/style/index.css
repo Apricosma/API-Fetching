@@ -50,7 +50,7 @@ header ul li {
 }
 /* header */
 
-.container.movielist {
+.movielist {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
@@ -60,4 +60,15 @@ header ul li {
 .moviecard p, .moviecard h2{
     color: #fff;
     text-align: center;
+}
+
+.moviesearch {
+    margin-top: 50px;
+    margin-left: 22px;
+    height: 45px;
+    width: 400px;
+    background-color: rgb(169, 167, 177);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 28px;
 }
