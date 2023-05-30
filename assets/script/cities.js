@@ -8,7 +8,8 @@ const cityOptions = {
         'Content-Type': 'application/json; charset=utf-8'
     },
     body: JSON.stringify({
-        country: 'canada'
+        country: 'canada',
+        country: 'united states'
     })
 };
 
