@@ -9,7 +9,6 @@ const cityOptions = {
     },
     body: JSON.stringify({
         country: 'canada',
-        country: 'united states'
     })
 };
 
