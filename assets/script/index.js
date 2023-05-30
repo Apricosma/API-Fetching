@@ -68,7 +68,8 @@ function movieSearch() {
     const searchInput = document.querySelector('.moviesearch');
     const suggestions = document.querySelector('.suggestions');
 
-    searchInput.addEventListener('input', function(event) {
+    // search on input
+    searchInput.addEventListener('input', (event) => {
         const searchTerm = searchInput.value.toLowerCase();
         suggestions.innerHTML = '';
 
@@ -84,9 +85,17 @@ function movieSearch() {
                 console.log(movie.title);
             });
         }
+
     });
-
-
+    
+    // clear on esc
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            searchInput.value = '';
+            searchInput.innerHTML = '';
+            suggestions.innerHTML = '';
+        }
+    });
 }
 
 movieSearch();

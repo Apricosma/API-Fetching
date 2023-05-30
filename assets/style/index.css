@@ -22,7 +22,7 @@ body {
 /* header */
 header {
     align-items: center;
-    background-color: #2d2f42;
+    background-color: #2069e0;
     padding: 10px;
     text-align: center;
     color: #fff;
@@ -68,7 +68,43 @@ header ul li {
     height: 45px;
     width: 400px;
     background-color: rgb(169, 167, 177);
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
     padding: 5px;
     font-size: 28px;
+}
+
+.suggestions {
+    position: absolute;
+    z-index: 1;
+    background-color: #d3d4d6;
+    margin-left: 22px;
+    overflow: auto;
+    max-height: 400px;
+}
+
+.suggestions::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+.suggestions::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+.suggestions::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.suggestions div {
+    padding: 10px;
+    width: 400px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #2069e0;
+    color: #fff;
+    border-radius: 0;
 }
