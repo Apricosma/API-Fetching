@@ -50,3 +50,14 @@ header ul li {
 }
 /* header */
 
+.container.movielist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 50px 20px;
+}
+
+.moviecard p, .moviecard h2{
+    color: #fff;
+    text-align: center;
+}
